@@ -1,3 +1,4 @@
+make clean
 ./configure --cc=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc --as='gas-preprocessor.pl /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc' --sysroot=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk --extra-ldflags=-L/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/usr/lib/system --target-os=darwin --arch=arm --cpu=cortex-a8 --extra-cflags='-arch armv7' --extra-ldflags='-arch armv7' --enable-pic --enable-cross-compile --disable-ffmpeg  --disable-ffplay --disable-ffserver --disable-doc
 
 
