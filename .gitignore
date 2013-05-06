@@ -2,3 +2,5 @@
 *.swap*
 gas-preprocessor/
 ffmpeg/
+ffmpeg-*/
+ffmpeg-*.tar.*
