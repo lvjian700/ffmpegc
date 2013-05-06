@@ -1,6 +1,32 @@
 make clean
+SDKVERSION="6.1"
+./configure \
+	--cc=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc \
+	--as='gas-preprocessor.pl /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc' \
+	--sysroot=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator${SDKVERSION}.sdk \
+	--extra-ldflags=-L/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator${SDKVERSION}.sdk/usr/lib/system \
+	--target-os=darwin \
+	--arch=i386 \
+	--cpu=i386 \
+	--extra-cflags='-arch i386' \
+	--extra-ldflags='-arch i386' \
+	--enable-pic \
+	--enable-cross-compile \
+	--disable-ffmpeg  \
+	--disable-ffplay \
+	--disable-ffserver \
+	--disable-encoders \
+	--disable-decoders \
+	--disable-demuxers \
+	--disable-muxers \
+	--enable-demuxer=flv \
+	--enable-demuxer=mov \
+	--enable-muxer=flv \
+	--enable-muxer=mov \
+	--enable-decoder=mp3 \
+	--enable-decoder=aac \
+	--disable-doc
 
-./configure --cc=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc --as='gas-preprocessor.pl /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc' --sysroot=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk --extra-ldflags=-L/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/usr/lib/system --target-os=darwin --arch=i386 --cpu=i386 --extra-cflags='-arch i386' --extra-ldflags='-arch i386' --enable-pic --enable-cross-compile --disable-ffmpeg  --disable-ffplay --disable-ffserver --disable-doc
 
 # build for i386
 make clean
