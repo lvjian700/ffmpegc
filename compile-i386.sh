@@ -15,16 +15,6 @@ SDKVERSION="6.1"
 	--disable-ffmpeg  \
 	--disable-ffplay \
 	--disable-ffserver \
-	--disable-encoders \
-	--disable-decoders \
-	--disable-demuxers \
-	--disable-muxers \
-	--enable-demuxer=flv \
-	--enable-demuxer=mov \
-	--enable-muxer=flv \
-	--enable-muxer=mov \
-	--enable-decoder=mp3 \
-	--enable-decoder=aac \
 	--disable-doc
 
 
