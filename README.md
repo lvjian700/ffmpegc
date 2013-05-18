@@ -40,8 +40,9 @@ You can see this project:
 2. /usr/sbin/gas-preprocessor.pl file exists. "sudo rm /usr/sbin/gas-preprocessor.pl" 
 	
 
-Thanks @Ronan0912. I can add armv7s support from this blog: 
-[http://www.tangentsoftworks.com/blog/2012/11/12/how-to-prepare-your-mac-for-ios-development-with-ffmpeg-libraries/]
+Thanks @Ronan0912. I can add armv7s support from this blog:	
+
+<http://www.tangentsoftworks.com/blog/2012/11/12/how-to-prepare-your-mac-for-ios-development-with-ffmpeg-libraries/>
 
 
 
