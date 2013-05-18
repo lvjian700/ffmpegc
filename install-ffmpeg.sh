@@ -19,6 +19,9 @@ echo "copy install shell script to ffmpeg"
 cp ./compile-*.sh "ffmpeg-${VERSION}"
 cd "ffmpeg-${VERSION}"
 
+echo "compile armv7s ..."
+./compile-armv7s.sh
+
 echo "compile armv7 ..."
 ./compile-armv7.sh
 
