@@ -15,7 +15,8 @@ SDKVERSION="6.1"
 	--disable-ffmpeg  \
 	--disable-ffplay \
 	--disable-ffserver \
-	--disable-doc
+	--disable-doc \
+	--disable-asm
 
 
 # build for i386
