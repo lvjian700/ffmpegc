@@ -1,4 +1,5 @@
-VERSION="1.0.1"
+SRCDIR=`pwd`
+VERSION="1.2.1"
 
 echo "install gas-* perl script"
 ./install-gas.sh
@@ -18,6 +19,13 @@ tar jxvf ffmpeg-${VERSION}.tar.bz2
 echo "copy install shell script to ffmpeg"
 cp ./compile-*.sh "ffmpeg-${VERSION}"
 cd "ffmpeg-${VERSION}"
+
+if [ -d x264 ]
+    then
+        (cd $SRCDIR/ffmpeg-${VERSION}/x264; git pull)
+    else
+        git clone git://git.videolan.org/x264.git x264
+fi
 
 echo "compile armv7s ..."
 ./compile-armv7s.sh

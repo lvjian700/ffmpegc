@@ -35,4 +35,8 @@ xcrun -sdk iphoneos lipo -output ./build/libswscale.a  \
 		-arch armv7 ./build/armv7/libswscale.a \
 		-arch i386 ./build/i386/libswscale.a
 
-
+xcrun -sdk iphoneos lipo -output ./x264/build/libx264.a  \
+    -create \
+        -arch armv7s ./x264/build/armv7s/lib/libx264.a \
+        -arch armv7 ./x264/build/armv7/lib/libx264.a \
+        -arch i386 ./x264/build/i386/lib/libx264.a

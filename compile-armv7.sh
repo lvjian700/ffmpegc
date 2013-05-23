@@ -1,5 +1,25 @@
-make clean
+SRCDIR=`pwd`
 SDKVERSION="6.1"
+
+cd $SRCDIR/x264
+
+make clean
+
+CC=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc \
+    ./configure \
+        --host=arm-apple-darwin \
+        --sysroot=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS${SDKVERSION}.sdk \
+        --prefix=build/armv7 \
+        --extra-cflags='-arch armv7' \
+        --extra-ldflags="-L/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS${SDKVERSION}.sdk/usr/lib/system -arch armv7" \
+        --enable-pic --disable-shared --enable-static
+
+make && make install
+
+cd $SRCDIR
+
+make clean
+
 ./configure \
 	--cc=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc \
 	--as='gas-preprocessor.pl /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc' \
@@ -8,10 +28,12 @@ SDKVERSION="6.1"
 	--target-os=darwin \
 	--arch=arm \
 	--cpu=cortex-a8 \
-	--extra-cflags='-arch armv7' \
-	--extra-ldflags='-arch armv7' \
+    --extra-cflags='-I./x264/build/armv7/include -arch armv7' \
+    --extra-ldflags='-L./x264/build/armv7/lib -arch armv7' \
 	--enable-pic \
 	--enable-cross-compile \
+    --enable-gpl \
+    --enable-libx264 \
 	--disable-ffmpeg  \
 	--disable-ffplay \
 	--disable-ffserver \

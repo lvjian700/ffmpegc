@@ -1,5 +1,29 @@
-make clean
+SRCDIR=`pwd`
 SDKVERSION="6.1"
+
+cd $SRCDIR/x264
+
+echo "compile x264 i386 ..."
+
+make clean
+
+CC=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc \
+    ./configure \
+        --host=i386-apple-darwin \
+        --sysroot=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator${SDKVERSION}.sdk \
+        --prefix=build/i386 \
+        --extra-cflags='-arch i386' \
+        --extra-ldflags="-L/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator${SDKVERSION}.sdk/usr/lib/system -arch i386" \
+        --enable-pic --disable-shared --enable-static --disable-asm
+
+make && make install
+
+cd $SRCDIR
+
+echo "compile ffmpeg i386 ..."
+
+make clean
+
 ./configure \
 	--cc=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc \
 	--as='gas-preprocessor.pl /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc' \
@@ -8,10 +32,12 @@ SDKVERSION="6.1"
 	--target-os=darwin \
 	--arch=i386 \
 	--cpu=i386 \
-	--extra-cflags='-arch i386' \
-	--extra-ldflags='-arch i386' \
+    --extra-cflags='-I./x264/build/i386/include -arch i386' \
+    --extra-ldflags='-L./x264/build/i386/lib -arch i386' \
 	--enable-pic \
 	--enable-cross-compile \
+    --enable-gpl \
+    --enable-libx264 \
 	--disable-ffmpeg  \
 	--disable-ffplay \
 	--disable-ffserver \
