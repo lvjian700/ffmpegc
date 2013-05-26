@@ -1,3 +1,5 @@
+Compile ffmpeg(include [x264 module][x264_1]) for iOS, support armv7s , armvs7 & i386 simulator. 
+
 ##Requirement
 ---
 
@@ -19,7 +21,7 @@
 1.Change ffmpeg version:	
 Change this line on install-ffmpeg.sh file:	
 
-	VERSION="1.0.1"	
+	VERSION="1.2.1"	
 
 2.Change iOSSDK version:	
 Change this line on each compile-*.sh file:	
@@ -41,8 +43,10 @@ You can see this project:
 	
 
 Thanks @Ronan0912. I can add armv7s support from this blog:	
+ <http://www.tangentsoftworks.com/blog/2012/11/12/how-to-prepare-your-mac-for-ios-development-with-ffmpeg-libraries/>
+ 
+[x264_1]: http://ffmpeg.org/trac/ffmpeg/wiki/x264EncodingGuide "x264 library"
 
-<http://www.tangentsoftworks.com/blog/2012/11/12/how-to-prepare-your-mac-for-ios-development-with-ffmpeg-libraries/>
 
-
+ 
 
