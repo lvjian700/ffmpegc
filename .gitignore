@@ -3,3 +3,4 @@
 gas-preprocessor/
 ffmpeg/
 ffmpeg-*/
+build/

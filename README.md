@@ -1,11 +1,44 @@
-Compile ffmpeg(include [x264 module][x264_1]) for iOS, support armv7s , armvs7 & i386 simulator. 
+Compile ffmpeg for iOS, support armv7s , armvs7 & i386 simulator. 
 
-##Requirement
+* iOS 7 not support x.264 module
+* iOS 6 version support x.264 module
+
+##iOS 7 Release Note
+
+* support iOS 7 & XCode 5
+* remove x.264 module(coming soon)
+
+##iOS 7 & XCode Version Requirement
 ---
 
-* XCode 4.5 or later
+* XCode 5 or later
+* iOS 7
+
+##How to use?
+---
+
+###Download & Compile ffmpeg
+
+    git clone git@github.com:lvjian700/ffmpegc.git
+    cd ffmpegc
+    ./install-ffmpeg.sh
+
+###How to use ?
+
+You can find output in "ffmpegc/build/built/universal".	
+
+1. Drag lib/*.a files to your project(copy to project).
+2. Add include folder to your "Header Search Paths".	
+
+
+
+
+##iOS 6 Version Requirement
+---
+
+* XCode 4.*
 * CommandLine Tools
-* iOS 6.0 or later
+* iOS 6.*
 
 ##How to use?
 ---
