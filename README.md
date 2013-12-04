@@ -1,6 +1,6 @@
 Compile ffmpeg for iOS, support armv7s , armvs7 & i386 simulator. 
 
-* iOS 7 not support x.264 module
+* iOS 7 version not support x.264 module
 * iOS 6 version support x.264 module
 
 ##iOS 7 Release Note
@@ -35,6 +35,8 @@ You can find output in "ffmpegc/build/built/universal".
 
 ##iOS 6 Version Requirement
 ---
+
+You can find old version in release tabs.	
 
 * XCode 4.*
 * CommandLine Tools
