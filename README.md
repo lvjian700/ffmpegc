@@ -33,7 +33,7 @@ You can find output in "ffmpegc/build/built/universal".
 
 
 
-##iOS 6 Version Requirement
+##iOS 6 Version Requirement(Old Version)
 ---
 
 You can find old version in release tabs.	
