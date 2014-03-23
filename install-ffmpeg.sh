@@ -4,7 +4,7 @@
 #  Choose your ffmpeg version and your currently-installed iOS SDK version:
 #
 VERSION="2.0.2"
-SDKVERSION="7.0"
+SDKVERSION="7.1"
 
 
 echo "install gas-* perl script"

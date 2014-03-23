@@ -1,7 +1,7 @@
 Compile ffmpeg for iOS, support armv7s , armvs7 & i386 simulator. 
 
 * iOS 7 version not support x.264 module
-* iOS 6 version support x.264 module
+* iOS 6 version support x.264 module ( version 1.0 )
 
 ##iOS 7 Release Note
 
@@ -12,7 +12,7 @@ Compile ffmpeg for iOS, support armv7s , armvs7 & i386 simulator.
 ---
 
 * XCode 5 or later
-* iOS 7
+* iOS 7 or later
 
 ##How to use?
 ---
@@ -29,8 +29,6 @@ You can find output in "ffmpegc/build/built/universal".
 
 1. Drag lib/*.a files to your project(copy to project).
 2. Add include folder to your "Header Search Paths".	
-
-
 
 
 ##iOS 6 Version Requirement(Old Version)
@@ -56,12 +54,12 @@ You can find old version in release tabs.
 1.Change ffmpeg version:	
 Change this line on install-ffmpeg.sh file:	
 
-	VERSION="1.2.1"	
+	VERSION="2.0.2"	
 
 2.Change iOSSDK version:	
 Change this line on each compile-*.sh file:	
 
-	SDKVERSION="6.1"	
+	SDKVERSION="7.1"	
 
 
 ###How to use ffmpeg?   
@@ -75,9 +73,10 @@ You can see this project:
 
 1. You may not install XCode command-line tools
 2. /usr/sbin/gas-preprocessor.pl file exists. "sudo rm /usr/sbin/gas-preprocessor.pl" 
+3. please check your _gas-preprocessor.pl_ path, more details see [issue#4](https://github.com/lvjian700/ffmpegc/issues/4)	
 	
 
-Thanks @Ronan0912. I can add armv7s support from this blog:	
+Thanks @Ronan0912. I can add armv7s support from this blog:	(version 1.0)
  <http://www.tangentsoftworks.com/blog/2012/11/12/how-to-prepare-your-mac-for-ios-development-with-ffmpeg-libraries/>
  
 [x264_1]: http://ffmpeg.org/trac/ffmpeg/wiki/x264EncodingGuide "x264 library"
